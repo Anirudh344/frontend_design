@@ -1,0 +1,50 @@
+/* header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  } */
+  
+  h1 {
+    margin: 0;
+  }
+  
+  #booking-form {
+    margin-top: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  button[type="submit"],
+  #payment-button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #booking-details {
+    margin-top: 20px;
+  }
+  
+  #reservation-details {
+    border: 1px solid #333;
+    padding: 20px;
+  }

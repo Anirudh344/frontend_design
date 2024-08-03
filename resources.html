@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="resources.css">
+    <style>
+    
+
+        body {
+            background-color: antiquewhite;
+        }
+
+        .logo {
+            background-color: rgb(143, 107, 107);
+            position: relative;
+            color: white;
+            height: 60px;
+            font-family: Papyrus;
+            font-size: 25px;
+            padding-left: 50px;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        img {
+           
+            padding: 12px 75px;
+        }
+
+
+
+        .navbar {
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        .navbar ul {
+            overflow: hidden;
+        }
+
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 13px 20px;
+
+        }
+
+        .navbar li a {
+            padding: 3px 3px;
+            text-decoration: none;
+            color: rgb(142, 80, 80);
+        }
+
+        .navbar li a:hover {
+            color: rgb(255, 248, 248);
+            background-color: rgb(142, 80, 80);
+            border-radius: 5px;
+        }
+
+        .search {
+            float: right;
+            color: white;
+            padding: 12px 75px;
+        }
+
+        .navbar input {
+            border: 2px solid black;
+            border-radius: 14px;
+            padding: 3px 17px;
+            width: 129px;
+        }
+.container{
+
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 8000px;
+
+}
+
+.cube{
+position: relative;
+width: 200px;
+height: 200px;
+transform-style: preserve-3d;
+animation: cubeRotate 10s linear infinite;
+}
+
+@keyframes cubeRotate{
+    
+    0%{transform: rotateX(90deg) ;}
+25%{transform: rotateY(-90deg);}
+50%{transform: rotateX(-90deg)}
+75%{transform: rotateY(-90deg)}
+100%{transform: rotateX(90deg)}
+
+}
+
+.cube > div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    border: 2px solid white;
+}
+
+
+.front{
+background-color: red;
+transform: translateZ(100px);
+
+}
+
+.back{
+    background-color: rgb(149, 18, 156);
+transform: translateZ(-100px);
+
+}
+.left{
+background-color: grey;
+transform: rotateY(90deg)translateZ(100px);
+}
+
+.right{
+    background-color: rgb(114, 19, 216);
+transform: rotateY(90deg)translateZ(-100px);
+}
+
+
+.top{
+    background-color: rgb(58, 255, 14);
+transform: rotateX(90deg)translateZ(100px);
+}
+
+.bottom{
+    background-color: rgb(255, 255, 0);
+transform: rotateX(90deg)translateZ(-100px);
+}
+
+
+
+    </style>
+</head>
+
+<body>
+<div class="head">   <div class="logo"> WEB BROS.COM <img
+        src="file:///C:/Users/Aryan/Pictures/Saved%20Pictures/download.jpeg" height="20px" width="60px" align="right">
+</div>
+
+<header>
+<nav class="navbar">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projects</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Contact us</a></li>
+        <div class="search">
+            <input type="text" name="search" id="search" placeholder="Search this website">
+        </div>
+    </ul>
+</nav>
+</header>
+<hr>
+</div> 
+<div class="container">
+
+<div class="cube">
+    <div class="front"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="back"></div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+    
+
+</div>
+
+</div>
+
+<header>
+    <h1>Hotel Booking</h1>
+  </header>
+
+  <section id="booking-form">
+    <h2>Make a Reservation</h2>
+    <form id="reservation-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+      <label for="check-in">Check-in Date:</label>
+      <input type="date" id="check-in" required>
+      <label for="check-out">Check-out Date:</label>
+      <input type="date" id="check-out" required>
+      <label for="room-type">Room Type:</label>
+      <select id="room-type" required>
+        <option value="">Select Room Type</option>
+        <option value="standard-ac">Standard AC</option>
+        <option value="standard-non-ac">Standard Non-AC</option>
+        <option value="deluxe-ac">Deluxe AC</option>
+        <option value="deluxe-non-ac">Deluxe Non-AC</option>
+        <option value="suite-ac">Suite AC</option>
+        <option value="suite-non-ac">Suite Non-AC</option>
+      </select>
+      <label for="bed-type">Bed Type:</label>
+      <select id="bed-type" required>
+        <option value="">Select Bed Type</option>
+        <option value="single">Single Bed</option>
+        <option value="double">Double Bed</option>
+        <option value="king">King Bed</option>
+      </select>
+      <button type="submit">Book Now</button>
+    </form>
+    <button id="payment-button" disabled>Proceed to Payment</button>
+  </section>
+
+  <section id="booking-details">
+    <h2>Your Reservation</h2>
+    <div id="reservation-details"></div>
+  </section>
+    <!-- <div class="background">.</div> -->
+</body>
+</html>
